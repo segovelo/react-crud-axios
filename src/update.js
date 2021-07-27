@@ -1,13 +1,14 @@
-import { BrowserRouter as Router, Route } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import { Button, Checkbox, Form } from 'semantic-ui-react'
 import axios from 'axios';
+import { useHistory } from 'react-router';
 
 export default function Update() {
     const [id, setID] = useState(null);
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [checkbox, setCheckbox] = useState(false);
+    let history = useHistory();
     useEffect(() => {
         setID(localStorage.getItem('ID'))
         setFirstName(localStorage.getItem('First Name'));
@@ -19,7 +20,7 @@ export default function Update() {
             firstName,
             lastName,
             checkbox
-        })
+        }).then(() => { history.push('/read')})
     }
 
     return (
