@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { Button, Checkbox, Form } from 'semantic-ui-react';
 import { useHistory } from 'react-router';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
+import './App.css';
 
 export default function Create() {
     const [firstName, setFirstName] = useState('');
@@ -32,7 +34,10 @@ export default function Create() {
                 <Form.Field>
                     <Checkbox label='I agree to the Terms and Conditions' onChange={(e) => setCheckbox(!checkbox)} />
                 </Form.Field>
-                <Button onClick={postData} type='submit'>Submit</Button>
+                <div className="nav-div">
+                    <Button className="nav-button" onClick={postData} type='submit'>Submit</Button>
+                    <Link className='nav-button' to="/read"><Button>Users</Button></Link>
+                </div>
             </Form>
         </div>
     )

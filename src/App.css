@@ -16,3 +16,16 @@
   font-family: "Montserrat", sans-serif;
   font-size: 12px !important;
 }
+
+
+.nav-div{
+  display: flex;
+  flex-Direction: block;
+  align-Items: center;
+  justify-Content: center;
+}
+
+.nav-button { 
+  margin:20px;
+}
+

@@ -22,16 +22,16 @@ export default function Read() {
     }
     const onDelete = (id) => {
         axios.delete(`https://61004cc6bca46600171cf84a.mockapi.io/api-crud/v1/fakeData/${id}`)
-     .then(() => {
-        getData();
-    })
-}
-const getData = () => {
-    axios.get(`https://61004cc6bca46600171cf84a.mockapi.io/api-crud/v1/fakeData`)
-        .then((getData) => {
-             setAPIData(getData.data);
-         })
-}
+            .then(() => {
+                getData();
+            })
+    }
+    const getData = () => {
+        axios.get(`https://61004cc6bca46600171cf84a.mockapi.io/api-crud/v1/fakeData`)
+            .then((getData) => {
+                setAPIData(getData.data);
+            })
+    }
 
 
     return (
@@ -57,13 +57,16 @@ const getData = () => {
                                     <Table.Cell> <Button onClick={() => setData(data)}>Update</Button></Table.Cell>
                                 </Link>
                                 <Table.Cell>
-                                <Button onClick={() => onDelete(data.id)}>Delete</Button>
+                                    <Button onClick={() => onDelete(data.id)}>Delete</Button>
                                 </Table.Cell>
                             </Table.Row>
                         )
                     })}
                 </Table.Body>
             </Table>
+            <div className="nav-div">
+                <Link to="/"><Button >New User</Button> </Link>
+            </div>
         </div>
     )
 }

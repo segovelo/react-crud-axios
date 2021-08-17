@@ -69,14 +69,15 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
-
 ==========================================================================
 
-This project follows from  https://www.freecodecamp.org/news/how-to-perform-crud-operations-using-react/?fbclid=IwAR1mrio4MZ7244jeutCohCsQIIM-8uDEzJVF-w4-l9Y2rUHnxtiLR58GSMo
+This project follows from https://www.freecodecamp.org/news/how-to-perform-crud-operations-using-react/?fbclid=IwAR1mrio4MZ7244jeutCohCsQIIM-8uDEzJVF-w4-l9Y2rUHnxtiLR58GSMo
 
 It uses https://mockapi.io/projects as a backend API.
 It uses https://react.semantic-ui.com/collections/form/ to copy form boilerplate
 
 Dependencies:
 
+yarn add react-hook-form@6.15.4 react-router-dom@5.2.0 bootstrap@4.6.0 react-bootstrap@1.5.0
 npm install semantic-ui-react semantic-ui-css
+npm install axios

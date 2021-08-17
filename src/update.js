@@ -20,7 +20,7 @@ export default function Update() {
             firstName,
             lastName,
             checkbox
-        }).then(() => { history.push('/read')})
+        }).then(() => { history.push('/read') })
     }
 
     return (
@@ -37,7 +37,9 @@ export default function Update() {
                 <Form.Field>
                     <Checkbox label='I agree to the Terms and Conditions' checked={checkbox} onChange={(e) => setCheckbox(!checkbox)} />
                 </Form.Field>
-                <Button type='submit' onClick={updateAPIData}>Update</Button>
+                <div className="nav-div">
+                    <Button type='submit' onClick={updateAPIData}>Update</Button>
+                </div>
             </Form>
         </div>
     )
