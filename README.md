@@ -79,5 +79,6 @@ It uses https://react.semantic-ui.com/collections/form/ to copy form boilerplate
 Dependencies:
 
 yarn add react-hook-form@6.15.4 react-router-dom@5.2.0 bootstrap@4.6.0 react-bootstrap@1.5.0
-npm install semantic-ui-react semantic-ui-css
-npm install axios
+yarn add semantic-ui-react semantic-ui-css
+yarn add axios
+yarn add react-hook-form@6.15.4
