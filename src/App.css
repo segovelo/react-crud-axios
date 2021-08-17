@@ -17,15 +17,21 @@
   font-size: 12px !important;
 }
 
-
-.nav-div{
+.nav-div {
   display: flex;
-  flex-Direction: block;
-  align-Items: center;
-  justify-Content: center;
+  flex-direction: block;
+  align-items: center;
+  justify-content: center;
 }
 
-.nav-button { 
-  margin:20px;
+.nav-button {
+  margin: 20px;
 }
 
+.userH1 {
+  display: flex;
+  flex-direction: block;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}

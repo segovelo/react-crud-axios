@@ -1,16 +1,26 @@
 import { Link } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
 import { Table, Button } from 'semantic-ui-react';
+import useAxios from './useAxios';
 import axios from 'axios';
 
 export default function Read() {
     const [APIData, setAPIData] = useState([]);
+    const { response, loading, error } =  useAxios({
+        method: 'get',
+        url: '/fakeData',
+        //headers: JSON.stringify({ accept: '*/*' }),
+        // body: JSON.stringify({
+        //     firstName: 'Carlos',
+        //     lastName: 'Fernandez',
+        //     checkbox: false, 
+        // }),
+    });
+
+
     useEffect(() => {
-        axios.get(`https://61004cc6bca46600171cf84a.mockapi.io/api-crud/v1/fakeData`)
-            .then((response) => {
-                setAPIData(response.data);
-            })
-    }, [])
+        setAPIData(response);         
+    }, [response])
 
     const setData = (data) => {
         console.log(data);
@@ -34,9 +44,20 @@ export default function Read() {
     }
 
 
-    return (
-        <div>
-            <Table singleLine>
+    return (        
+        <div>            
+            <h1 className='userH1'>Users</h1>
+                {loading ? (
+            <h1 className='userH1'>loading...</h1>
+    ) : (
+            <div>
+                {error && 
+                (<div>
+                  < p>Error Message: {error.message}</p>
+                </div>
+                )}   
+            <div>
+              <Table singleLine>
                 <Table.Header>
                     <Table.Row>
                         <Table.HeaderCell>Name</Table.HeaderCell>
@@ -68,5 +89,8 @@ export default function Read() {
                 <Link to="/"><Button >New User</Button> </Link>
             </div>
         </div>
-    )
-}
+        </div>
+        )}
+        </div>  
+     );
+  }
