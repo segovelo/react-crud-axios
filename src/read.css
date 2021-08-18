@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+.main-read {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  min-height: 100vh;
+  background-color: #212121;
+  color: whitesmoke;
+  flex-direction: column;
+}
+.main-header {
+  font-family: "Montserrat", sans-serif;
+}
+.create-form label {
+  color: whitesmoke !important;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px !important;
+}
+
+.nav-div {
+  display: flex;
+  flex-direction: block;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.nav-button {
+  margin: 20px;
+}
+
+.userH1 {
+  display: flex;
+  flex-direction: block;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.read-table {
+  width: 700px;
+}
+.read-row {
+  width: 700px;
+}
+
+.div-table {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 780px;
+  font-size: 12px;
+}
+
+.button-update {
+  width: 90%;
+  height: auto;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.button-delete {
+  visibility: hidden;
+}
+
+@media screen and (min-width: 770px) {
+  .div-table {
+    font-size: 16px;
+  }
+
+  .button-update {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 580px) {
+  .button-delete {
+    visibility: inherit;
+  }
+}

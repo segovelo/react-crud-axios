@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Table, Button } from 'semantic-ui-react';
 import useAxios from './useAxios';
 import axios from 'axios';
+import './read.css';
 
 export default function Read() {
     const [APIData, setAPIData] = useState([]);
@@ -45,7 +46,7 @@ export default function Read() {
 
 
     return (        
-        <div>            
+        <div className="main-read">            
             <h1 className='userH1'>Users</h1>
                 {loading ? (
             <h1 className='userH1'>loading...</h1>
@@ -56,10 +57,10 @@ export default function Read() {
                   < p>Error Message: {error.message}</p>
                 </div>
                 )}   
-            <div>
-              <Table singleLine>
+            <div className="div-table">
+              <Table fixed unstackable>
                 <Table.Header>
-                    <Table.Row>
+                    <Table.Row className="read-row">
                         <Table.HeaderCell>Name</Table.HeaderCell>
                         <Table.HeaderCell>Last Name</Table.HeaderCell>
                         <Table.HeaderCell>Checked</Table.HeaderCell>
@@ -74,11 +75,11 @@ export default function Read() {
                                 <Table.Cell>{data.firstName}</Table.Cell>
                                 <Table.Cell>{data.lastName}</Table.Cell>
                                 <Table.Cell>{data.checkbox ? 'Checked' : 'Unchecked'}</Table.Cell>
-                                <Link to='/update'>
-                                    <Table.Cell> <Button onClick={() => setData(data)}>Update</Button></Table.Cell>
+                                <Link to='/index.html/update'>
+                                    <Table.Cell> <Button className="button-update" onClick={() => setData(data)}>Update</Button></Table.Cell>
                                 </Link>
                                 <Table.Cell>
-                                    <Button onClick={() => onDelete(data.id)}>Delete</Button>
+                                    <Button className="button-delete" onClick={() => onDelete(data.id)}>Delete</Button>
                                 </Table.Cell>
                             </Table.Row>
                         )
@@ -86,7 +87,7 @@ export default function Read() {
                 </Table.Body>
             </Table>
             <div className="nav-div">
-                <Link to="/"><Button >New User</Button> </Link>
+                <Link to="/index.html"><Button className="nav-button" >New User</Button> </Link>
             </div>
         </div>
         </div>

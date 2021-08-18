@@ -15,13 +15,14 @@ export default function Create() {
             firstName,
             lastName,
             checkbox
-        }).then(() => { history.push('/read') })
+        }).then(() => { history.push('/index.html/read') })
         console.log(firstName);
         console.log(lastName);
         console.log(checkbox);
     }
     return (
-        <div>
+        <div className="main">
+            <h2 className="main-header">React Crud Operations</h2> 
             <Form className="create-form">
                 <Form.Field>
                     <label>First Name</label>
@@ -36,7 +37,7 @@ export default function Create() {
                 </Form.Field>
                 <div className="nav-div">
                     <Button className="nav-button" onClick={postData} type='submit'>Submit</Button>
-                    <Link className='nav-button' to="/read"><Button>Users</Button></Link>
+                    <Link className='nav-button' to="/index.html/read"><Button>Users</Button></Link>
                 </div>
             </Form>
         </div>

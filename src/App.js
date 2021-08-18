@@ -8,17 +8,10 @@ import Update from './update';
 
 function App() {
   return (
-    <Router>
-      <div className="main">
-        <h2 className="main-header">React Crud Operations</h2>
-        <div>
-          <Route exact path='/' component={Create} />
-        </div>
-        <div style={{ marginTop: 20 }}>
-          <Route exact path='/read' component={Read} />
-        </div>
-        <Route exact path='/update' component={Update} />
-      </div>
+    <Router>       
+        <Route  path='/index.html' exact={true} component={Create} />     
+        <Route exact path='/index.html/read' component={Read} />   
+        <Route exact path='/index.html/update' component={Update} />      
     </Router>
   );
 }

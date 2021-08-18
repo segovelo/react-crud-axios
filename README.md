@@ -82,3 +82,4 @@ yarn add react-hook-form@6.15.4 react-router-dom@5.2.0 bootstrap@4.6.0 react-boo
 yarn add semantic-ui-react semantic-ui-css
 yarn add axios
 yarn add react-hook-form@6.15.4
+yarn add react-bootstrap@next bootstrap@5.1.0

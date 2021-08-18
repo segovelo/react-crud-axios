@@ -20,11 +20,11 @@ export default function Update() {
             firstName,
             lastName,
             checkbox
-        }).then(() => { history.push('/read') })
+        }).then(() => { history.push('/index.html/read') })
     }
 
     return (
-        <div>
+        <div className="main">
             <Form className="create-form">
                 <Form.Field>
                     <label>First Name</label>
