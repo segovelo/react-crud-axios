@@ -76,10 +76,12 @@ This project follows from https://www.freecodecamp.org/news/how-to-perform-crud-
 It uses https://mockapi.io/projects as a backend API.
 It uses https://react.semantic-ui.com/collections/form/ to copy form boilerplate
 
+To start react web app, inside your demo-app folder in terminal:
+c:\react-projects\demo-app> npm start
+The landing page will be on localhost:3000/index.html
+
 Dependencies:
 
-yarn add react-hook-form@6.15.4 react-router-dom@5.2.0 bootstrap@4.6.0 react-bootstrap@1.5.0
+yarn add react-hook-form@6.15.4 react-router-dom@5.2.0
 yarn add semantic-ui-react semantic-ui-css
 yarn add axios
-yarn add react-hook-form@6.15.4
-yarn add react-bootstrap@next bootstrap@5.1.0
