@@ -16,7 +16,7 @@ export default function Update() {
         setCheckbox(localStorage.getItem('Checkbox Value') === 'true' ? true : false);
     }, []);
     const updateAPIData = () => {
-        axios.put(`https://61004cc6bca46600171cf84a.mockapi.io/api-crud/v1/fakeData/${id}`, {
+        axios.put(`https://xxxxxxxxxxxxxx.mockapi.io/api-crud/v1/fakeData/${id}`, {
             firstName,
             lastName,
             checkbox
