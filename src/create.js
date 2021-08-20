@@ -11,7 +11,7 @@ export default function Create() {
     const [checkbox, setCheckbox] = useState(false);
     let history = useHistory();
     const postData = () => {
-        axios.post(`https://61004cc6bca46600171cf84a.mockapi.io/api-crud/v1/fakeData`, {
+        axios.post(`https://xxxxxxxxxxxxxxx.mockapi.io/api-crud/v1/fakeData`, {
             firstName,
             lastName,
             checkbox
